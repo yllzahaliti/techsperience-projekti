@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contract</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script>
+	function clear()
+	{
+		document.getElementById("myform").reset();
+	}
+
+	</script>
+</head>
+<body>
+<div class='container'>
+	<form method='POST' action='/kontrata/update/<%= doc._id %>'>
+	<div class='row'>
+	<div class="col-md-12">
+		<h1>Shto kontraten e re </h1>
+		<h4>Prokurimi:</h4>
+	</div>
+			<div class='col-md-6 kolona'>
+			<label for="NrRendor">Nr. rendor i prokurimit</label><br>
+    		<input type="text" name='nrRendor' value="<%= doc.nrRendor %>" class="form-control" id="NrRendor"  placeholder="Nr. rendor i prokurimit">
+			</div>
+			<div class='col-md-6 kolona'>
+			<label for="Lloji">Lloji i prokurimit</label><br>
+    		<input type="text" name='lloji' class="form-control" id="Lloji" value="<%= doc.lloji %>"  placeholder="Lloji i prokurimit">
+			</div>
+			<div class='col-md-12'>
+			<label for="Aktiviteti">Aktiviteti i prokurimit</label><br>
+    		<input type="text" name="aktiviteti" class="form-control" id="Aktiviteti" value="<%= doc.aktiviteti %>" placeholder="Aktiviteti i prokurimit">
+			</div>
+
+		<div class='col-md-12'>
+		<h4>Datat:</h4>
+		</div>
+		<div class='col-md-6 kolona'>
+			<label for="Di">Data e inicimit te aktivitetit te prokurimit</label><br>
+    		<input type="date" name="dataInicimit" class="form-control" id="Di" value="<%= doc.dataInicimit %>" placeholder="03.03.2018">
+			</div>
+			<div class='col-md-6 kolona'>
+			<label for="Dsh">Data e publikimit te shpalljes</label><br>
+    		<input type="date" name="dataPublikimit" class="form-control" id="Dsh" value="<%= doc.dataPublikimit %>" placeholder="03.02.2018">
+			</div>
+			<div class='col-md-12'>
+			<label for="Dk">Data e nenshkrimit te kontrates</label><br>
+    		<input type="date" name="dataNenshkrimit" class="form-control" id="Dk" value="<%= doc.dataNenshkrimit %>" placeholder="03.02.2018">
+    		<p> Afatet per implementimin e kontrates: </p>
+			</div>
+			<div class='col-md-6 kolona'>
+    		<input type="date" name="dataImplementimit" class="form-control" value="<%= doc.dataImplementimit %>" placeholder="03.02.2018">
+			</div>
+			<div class='col-md-6 kolona'>
+    		<input type="date" name="dataImplementimit" class="form-control" value="<%= doc.dataImplementimit %>" placeholder="03.02.2018">
+			</div>
+			<div class='col-md-12'>
+			<label for="Dp">Data e permbylljes se kontrates(data e pranimit te perkohshem/preliminar)</label><br>
+
+    		<input type="date" name="dataPermbylljes" class="form-control" id='Dp' placeholder="03.02.2018" value="<%= doc.dataPermbylljes %>">
+    		<h4> Cmimi dhe te dhenat tjera: </h4>
+    		</div>
+    		<div class='col-md-6 kolona'>
+			<label for="Ct">Cmimi total i paguar per kontraten</label><br>
+    		<input type="text" name="cmimi" class="form-control" id="Dsh"  placeholder="Cmimi total" value="<%= doc.cmimi %>">
+			</div>
+    		<div class='col-md-6 kolona'>
+			<label for="c">Cmimi i kontrates(duke perfshire te gjitha taksat)</label><br>
+    		<input type="text" name="cmimiKontrates" class="form-control" id="c"  placeholder="Cmimi i kontrates" value="<%= doc.cmimiKontrates %>">
+			</div>
+			
+			<div class='col-md-12'>
+			<label for="E">Emri i te cilit i eshte dhene kontrata</label><br>
+    		<input type="text" name="kontraktuesi" class="form-control" id="E"  placeholder="Emri dhe mbiemri" value="<%= doc.kontraktuesi %>">
+			</div>
+			<div class='col-md-6 kolona'>
+			<a href='/kontrata/update/<%= doc._id %>'> <button type="submit" class="btn btn-primary" style='width:90%'>Dergo</button></a>
+			</div>
+			<div class='col-md-6 kolona'>
+			<button type="submit" class="btn btn-secodary" style='width:90%' onclick='clear()'>Fshij</button>
+			</div>
+
+    		</div>
+
+			</div>
+	</div>
+	</form>
+</div>
+</body>
+</html>

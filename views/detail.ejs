@@ -1,0 +1,52 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+</head>
+
+<style> 
+h5,p,h2
+{
+text-align:left;
+padding-left:10%;
+margin-top: 5px;}
+</style>
+<body>
+
+<h2> Detajet e kontrates </h1>
+
+<div class="row">
+
+<div class="col-sm-3">
+<h5> Numri rendor i prokurimit </h5> 
+<h5> Lloji i prokurimit </h5> 
+<h5> Aktiviteti i prokurimit </h5> 
+<h5> Data e inicimit te aktivitetit te prokurimit </h5> 
+<h5> Data e publikimit te shpalljes </h5> 
+<h5> Data e nenshkrimit te kontrates </h5> 
+<h5> Afatet per implementimin e kontates </h5> 
+<h5> Data e permbylljes se kontrates</h5>
+<h5> Cmimi total i paguar pe kontrate</h5>
+<h5> Cmimi i kontrates</h5>
+<h5> Emri i te cilit i eshte dhene kontrata</h5>
+  </div>
+  <div class="col-sm-3">
+  	<p><%= doc.nrRendor %> </p>
+<p><%=doc.lloji %> </p>
+<p><%=doc.aktiviteti %> </p>
+<p><%=doc.dataInicimit %> </p>
+<p><%=doc.dataPublikimit %> </p>
+<p><%=doc.dataNenshkrimit %> </p>
+<p><%=doc.dataImplementimit %> </p>
+<p><%=doc.dataPermbylljes %> </p>
+<p><%=doc.cmimi %> </p>
+<p><%=doc.cmimiKontrates %> </p>
+<p><%=doc.kontraktuesi %> </p>
+  </div>
+  <div class="col-sm-6">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="table-responsive">
+<a href="/shto"><button style="margin:5px;" type="button" class="btn btn-secondary"> Shto kontrate</button> </a>
+
+<table style='margin:5px;' class="table table-bordered">
+<tr> 
+<td>Nr.Rendor</td>
+<td>Lloji i prokurimit</td>
+<td>Aktiviteti i prokurimit</td>
+<td>Data e inicimit te prokurimit</td>
+<td>Data e publikimit</td>
+<td>Data e nenshrimit te kontrates</td>
+<td>Afatet per implementim </td>
+<td>Permbyllja e kontrates</td>
+<td>Cmimi total per kontraten </td>
+<td>Cmimi i kontrates</td>
+<td>Kontraktuesi</td>
+</tr>
+
+
+<% docs.map((doc)=>
+
+{%>
+<tr> 
+<td><%=doc.nrRendor %></td>
+<td><%=doc.lloji %></td>
+<td><%=doc.aktiviteti %></td>
+<td><%=doc.dataInicimit %></td>
+<td><%=doc.dataPublikimit %></td>
+<td><%=doc.dataNenshkrimit %></td>
+<td><%=doc.dataImplementimit %></td>
+<td><%=doc.dataPermbylljes %></td>
+<td><%=doc.cmimi %></td>
+<td><%=doc.cmimiKontrates %></td>
+<td><%=doc.kontraktuesi %></td>
+
+<td><a href="/kontrata/delete/<%= doc._id %>">Fshij </a></td>
+<td><a href="/kontrata/edit/<%= doc._id %>">Ndrysho </a></td>
+<td><a href="/kontrata/<%= doc._id %>">Detajet </a></td>
+
+<%}); %>
+</tr>
+
+
+</table>
+</div>
+</body>
+</html>
